@@ -30,6 +30,7 @@ dist-ssr
 uploads/*
 !uploads/.gitkeep
 config/config.php
+!config/config.sample.php
 
 # Temporary files
 test.php
