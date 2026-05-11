@@ -1,0 +1,32 @@
+
+# 校园墙系统 - Apache 配置
+RewriteEngine On
+
+# 防止目录列表
+Options -Indexes
+
+# 保护敏感文件
+<FilesMatch "\.(sql|md|gitignore|env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 保护配置目录
+<Directory "config">
+    Order allow,deny
+    Deny from all
+</Directory>
+
+# 保护包含目录
+<Directory "includes">
+    Order allow,deny
+    Deny from all
+</Directory>
+
+# 错误页面
+ErrorDocument 404 /index.php
+
+# 启用 Gzip 压缩
+&lt;IfModule mod_deflate.c&gt;
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+&lt;/IfModule&gt;
