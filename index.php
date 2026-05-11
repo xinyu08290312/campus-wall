@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
 
-$current_user = get_current_user();
+$current_user = get_logged_in_user();
 $topic_id = isset($_GET['topic']) ? intval($_GET['topic']) : null;
 $posts = get_posts($topic_id);
 $topics = get_topics();

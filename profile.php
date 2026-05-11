@@ -6,7 +6,7 @@ if (!is_user_logged_in()) {
     exit;
 }
 
-$user = get_current_user();
+$user = get_logged_in_user();
 $stats = get_user_stats($user['id']);
 $posts = get_user_posts($user['id']);
 

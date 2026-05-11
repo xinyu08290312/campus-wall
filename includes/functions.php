@@ -43,8 +43,8 @@ if (!defined('FUNCTIONS_LOADED')) {
     }
 
     // 获取当前用户信息
-    if (!function_exists('get_current_user')) {
-        function get_current_user() {
+    if (!function_exists('get_logged_in_user')) {
+        function get_logged_in_user() {
             if (!is_user_logged_in()) {
                 return null;
             }

@@ -4,7 +4,7 @@ require_once __DIR__ . '/includes/functions.php';
 $id = intval($_GET['id'] ?? 0);
 $post = get_post($id);
 $comments = $post ? get_comments($id) : [];
-$current_user = get_current_user();
+$current_user = get_logged_in_user();
 $message = '';
 
 if (!$post) {

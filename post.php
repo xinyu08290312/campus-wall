@@ -6,7 +6,7 @@ if (!is_user_logged_in()) {
     exit;
 }
 
-$user = get_current_user();
+$user = get_logged_in_user();
 $topics = get_topics();
 $message = '';
 $success = false;
